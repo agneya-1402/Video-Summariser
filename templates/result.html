@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Summary Result</title>
+    <!-- This is how you link the CSS file in Flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="content result-content">
+            <h1>Video Summary</h1>
+            
+            <div class="summary-container">
+                <h3>Generated Summary:</h3>
+                <div class="summary-text">
+                    {{ summary }}
+                </div>
+            </div>
+            
+            <a href="/" class="back-btn">Summarize Another Video</a>
+        </div>
+    </div>
+</body>
+</html>

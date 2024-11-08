@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Summarizer</title>
+    <!-- This is how you link the CSS file in Flask -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <h1>Agneya Pathare</h1>
+            <p class="presents">Presents</p>
+            
+            <h2 class="app-title">Video Summarizer</h2>
+            
+            <form action="/" method="post" enctype="multipart/form-data" class="upload-form">
+                <div class="file-input-container">
+                    <input type="text" id="file-chosen" readonly value="No File Chosen">
+                    <label for="actual-file" class="choose-file">Choose File</label>
+                    <input type="file" id="actual-file" name="file" accept="video/*" hidden>
+                </div>
+                
+                <button type="submit" class="summarize-btn">Summarize</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const actualFile = document.getElementById('actual-file');
+        const fileChosen = document.getElementById('file-chosen');
+
+        actualFile.addEventListener('change', function() {
+            if (this.files && this.files[0]) {
+                fileChosen.value = this.files[0].name;
+            } else {
+                fileChosen.value = 'No File Chosen';
+            }
+        });
+    </script>
+</body>
+</html>
