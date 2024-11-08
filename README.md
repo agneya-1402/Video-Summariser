@@ -2,7 +2,7 @@
 
 A Flask-based web application that automatically generates text summaries from video content using speech recognition and natural language processing.
 
-![Video Summarizer Interface](project-screenshot.png)
+![Video Summarizer Interface](MacBook Air - 1.png)
 
 ## Features
 
